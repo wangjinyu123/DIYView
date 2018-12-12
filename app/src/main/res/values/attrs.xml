@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DiyDemo1">
+        <attr name="view_text" format="string"></attr>
+        <attr name="edit_hint" format="string"></attr>
+    </declare-styleable>
+</resources>

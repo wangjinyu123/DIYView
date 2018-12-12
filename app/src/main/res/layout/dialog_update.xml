@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <com.zto.diyview.DiyDemo1
+
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/update_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:edit_hint="请输入学号"
+        app:view_text="学号 : "
+        />
+    <com.zto.diyview.DiyDemo1
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/update_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:edit_hint="请输入姓名"
+        app:view_text="姓名 : "
+        />
+    <com.zto.diyview.DiyDemo1
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/update_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:edit_hint="请输入年龄"
+        app:view_text="年龄 : "
+        />
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"/>
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/return_button"
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改"/>
+
+    </RelativeLayout>
+</LinearLayout>
