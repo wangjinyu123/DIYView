@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         init();
     }
     public void init(){
+        Log.d(TAG, "init: 上传git成功");
         poolmap=new HashMap<String,Integer>();
         pool=new SoundPool(3, AudioManager.STREAM_MUSIC,0);
         poolmap.put("scanok",pool.load(this,R.raw.scanok,1));
