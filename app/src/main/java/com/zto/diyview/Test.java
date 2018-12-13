@@ -6,4 +6,5 @@ package com.zto.diyview;
 
 public class Test {
     String a="dasdsadsadadsadas";
+    String b="2222222222";
 }
