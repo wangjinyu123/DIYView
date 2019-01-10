@@ -120,6 +120,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         student.setAge(studentAge.getText());
                         student.setColor("粉色");
                         if (StudentData.insert(student)){
+                            if(poolTrue)
                             pool.play(poolmap.get("scanok"), 1.0f, 1.0f, 0, 0, 1.0f);
                             if (mlist.size()==10){
                                 mlist.remove(0);
@@ -130,6 +131,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             Toast.makeText(this, "插入失败", Toast.LENGTH_SHORT).show();
                         }
                     }else{
+                        if(poolTrue)
                         pool.play(poolmap.get("repeat"), 1.0f, 1.0f, 0, 0, 1.0f);
                         boolean isTrue=false;
                         int postion=0;
@@ -180,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }else {
                     Toast.makeText(this, "请选择您要删除的项", Toast.LENGTH_SHORT).show();
+                    if(poolTrue)
                     pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
                 }
                 break;
@@ -188,6 +191,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     dialog();
                 }else {
                     Toast.makeText(this, "请选择你要修改的项", Toast.LENGTH_SHORT).show();
+                    if(poolTrue)
                     pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
                 }
                 
@@ -297,6 +301,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         listAdt.notifyDataSetChanged();
                     }else {
                         Toast.makeText(MainActivity.this, "修改失败", Toast.LENGTH_SHORT).show();
+                        if(poolTrue)
                         pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
                     }
                     alertDialog.dismiss();
@@ -318,13 +323,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public boolean check(){
         if (studentNumber.getText().trim().isEmpty()){
+            if(poolTrue)
             pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
             Toast.makeText(this, "学号不能为空", Toast.LENGTH_SHORT).show();
         }else if(studentName.getText().trim().isEmpty()){
             Toast.makeText(this, "姓名不能为空", Toast.LENGTH_SHORT).show();
+            if(poolTrue)
             pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
         }else if(studentAge.getText().trim().isEmpty()){
             Toast.makeText(this, "年龄不能为空", Toast.LENGTH_SHORT).show();
+            if(poolTrue)
             pool.play(poolmap.get("warning"), 1.0f, 1.0f, 0, 0, 1.0f);
         }else {
             return true;
