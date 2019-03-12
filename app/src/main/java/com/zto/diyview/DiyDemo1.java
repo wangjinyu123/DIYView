@@ -3,6 +3,7 @@ package com.zto.diyview;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -27,7 +28,7 @@ public class DiyDemo1 extends RelativeLayout {
         init();
         TypedArray array=mContext.obtainStyledAttributes(attrs,R.styleable.DiyDemo1);
         String text=array.getString(R.styleable.DiyDemo1_view_text);
-
+        Log.d(TAG, "DiyDemo1: ");
         String hint=array.getString(R.styleable.DiyDemo1_edit_hint);
         textView.setText(text);
         editText.setHint(hint);
